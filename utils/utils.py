@@ -3,7 +3,26 @@ import numpy as np
 from sklearn.metrics import confusion_matrix
 import networkx as nx
 import copy
-import cpnet
+# import cpnet  # 임시로 주석 처리
+
+# cpnet 대체 클래스 (임시)
+class CPNetBE:
+    def __init__(self):
+        self.coreness = {}
+    
+    def detect(self, G):
+        # networkx의 core_number 함수를 사용하여 coreness 계산
+        self.coreness = nx.core_number(G)
+    
+    def get_coreness(self):
+        return self.coreness
+
+# cpnet 모듈 대체
+class cpnet:
+    @staticmethod
+    def BE():
+        return CPNetBE()
+
 import random
 from itertools import combinations, groupby
 import matplotlib.pyplot as plt

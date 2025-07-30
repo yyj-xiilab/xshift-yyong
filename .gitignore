@@ -1,0 +1,47 @@
+# Output directories
+data/
+output/
+quick_demo_results/
+quick_results/
+real_detection_results/
+syntoreal_outputs/
+
+# Large installer files
+*.sh
+*.sh.*
+Anaconda3-*.sh*
+
+# PNG files
+*.png
+
+# Logs
+logs/
+*.log
+
+# Checkpoints
+checkpoint/
+*.npz
+*.bin
+*.pth
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
