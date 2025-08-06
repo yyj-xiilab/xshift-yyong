@@ -1,0 +1,30 @@
+# Core PyTorch
+torch>=2.1.2
+torchvision>=0.16.2
+torchaudio>=2.1.2
+
+# Vision Transformer and DINO
+timm>=1.0.19
+
+# Training utilities
+tqdm>=4.50.2
+tensorboard>=2.8.0
+
+# Computer Vision
+opencv-python>=4.9.0.80
+
+# Data visualization and analysis
+matplotlib>=3.8.2
+seaborn>=0.13.1
+scikit-learn>=1.7.0
+
+# Graph processing (for network analysis)
+networkx>=3.1
+
+# Data processing
+Pillow>=11.3.0
+numpy>=1.26.4
+
+# Additional dependencies that might be needed
+scipy>=1.15.3
+pandas>=2.1.4 
