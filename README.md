@@ -9,6 +9,9 @@ project/
 │
 ├── main.py                         # 실험 진입점 (디노+로라+코사인 조합 실행)
 ├── config.py                       # argparse + 실험 하이퍼파라미터
+├── requirements.txt                # 프로젝트 의존성 목록
+├── run_commands.sh                # 실행 명령어 모음집
+├── test_imports.py                # 모듈 import 테스트
 │
 ├── models/
 │   ├── __init__.py
@@ -49,6 +52,23 @@ project/
 - **Contrastive Learning**: Domain adaptation through contrastive loss
 - **Modular Design**: Clean, organized code structure
 
+## Quick Start
+
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Test Imports
+```bash
+python test_imports.py
+```
+
+### 3. Run Training
+```bash
+python main.py --name cls_lora_cosine --dataset leader_filename_47class --use_lora --use_cosine --lora_rank 8 --lora_alpha 16
+```
+
 ## Usage
 
 ### Basic Command
@@ -68,6 +88,13 @@ python main.py --name cls_lora_cosine --dataset leader_filename_47class --use_lo
 - `--num_steps`: Total training steps (default: 5000)
 - `--train_batch_size`: Training batch size (default: 4)
 - `--eval_batch_size`: Evaluation batch size (default: 8)
+
+### Command Collection
+
+모든 실행 명령어를 확인하려면:
+```bash
+./run_commands.sh
+```
 
 ### Dataset Paths
 
@@ -115,13 +142,18 @@ The code expects the following dataset structure:
 
 ## Dependencies
 
-- PyTorch
-- timm (for DINO models)
-- torchvision
-- tensorboard
-- tqdm
-- numpy
-- PIL
+- PyTorch >= 2.1.2
+- torchvision >= 0.16.2
+- timm >= 1.0.19
+- tensorboard >= 2.8.0
+- tqdm >= 4.50.2
+- opencv-python >= 4.9.0.80
+- matplotlib >= 3.8.2
+- seaborn >= 0.13.1
+- scikit-learn >= 1.7.0
+- networkx >= 3.1
+- Pillow >= 11.3.0
+- numpy >= 1.26.4
 
 ## Notes
 
@@ -129,4 +161,8 @@ The code expects the following dataset structure:
 - Only CLS adapter, classifier, and projection heads are trained
 - LoRA can be enabled for additional parameter efficiency
 - Cosine classification provides better generalization than linear
-- Contrastive learning helps with domain adaptation 
+- Contrastive learning helps with domain adaptation
+
+## Repository
+
+GitHub: [https://github.com/yyj-xiilab/xshift-yyong.git](https://github.com/yyj-xiilab/xshift-yyong.git) 
